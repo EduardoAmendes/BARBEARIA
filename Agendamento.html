@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="stylee.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+    <div class="container">
+        <div class="title">Agendamento</div>
+        <div class="content">
+            <form id="formulario" action="/cadastro" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details"><strong>Nome</strong></span>
+                        <input type="text" name="nome" placeholder="digite seu nome" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details"><strong>Telefone</strong></span>
+                        <input type="tel" name="telefone" placeholder="digite seu telefone" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email"><strong>Data</strong></label>
+                        <input type="date" name="data" id="data" required>
+
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <label>Selecione o tipo de corte:</label>
+                    <br>
+                    <input type="checkbox" id="corte1" name="corte[]" value="Disfarçado - R$ 20,00">
+                    <label for="corte1">Disfarçado - R$ 20,00</label>
+                    <br>
+                    
+                    <input type="checkbox" id="corte2" name="corte[]" value="Americano - R$ 15,00">
+                    <label for="corte2">Americano - R$ 15,00</label>
+                    <br>
+                    <input type="checkbox" id="corte3" name="corte[]" value="disfarçado e pigmentação - R$ 35,00">
+                    <label for="corte3">disfarçado e pigmentação - R$ 35,00</label>
+                    <br>
+                </div>
+                <br>
+                <div class="Status">
+                    <label for="Status"><strong>Status</strong></label>
+                    <select id="Status" name="status" required>
+                        <option selected disable value="">Status do agendamento</option>
+                        <option>cancelado</option>
+                        <option>pendente</option>
+                        <option>confirmado</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="horarios"><strong>Horários</strong></label>
+                    <select id="horarios" name="horario" required>
+                        <option selected disabled value="">Disponiveis</option>
+                        <option>09:00</option>
+                        <option>12:00</option>
+                        <option>15:00</option>
+                        <option>16:30</option>
+                    </select>
+                </div>
+                <br>
+                <div class="button">
+                    <input type="submit" name="submit" value="Agendar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
